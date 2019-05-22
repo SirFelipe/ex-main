@@ -1,2 +1,2 @@
 <?php
-    $connection = mysqli_connection('localhost','root','','ex');
+    $connection = mysqli_connect('localhost','root','','ex');
