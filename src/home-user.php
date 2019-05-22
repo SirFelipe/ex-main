@@ -40,7 +40,7 @@
     <main class="uk-container">
         <div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
             <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-                <a href="/add-trash.php"><h3 class="uk-card-title">Cadastrar lixo</h3></a>
+                <a href="add-trash.php"><h3 class="uk-card-title">Cadastrar lixo</h3></a>
                 <p>Aqui você pode colocar o lixo em sua cesta virtual a ser coletada</p>
             </div>
             <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">

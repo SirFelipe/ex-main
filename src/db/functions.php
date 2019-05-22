@@ -1,7 +1,12 @@
 <?php
 
 function insereUsuario($connection, $user, $password) {
-    $query = "INSERT INTO users(user, password) VALUES ('{$user}',{$password})";
+    $query = "INSERT INTO users(user, password) VALUES ('{$user}','{$password}')";
+    return mysqli_query($connection, $query);
+}
+
+function insereLixo($connection, $nome, $tipo, $quantidade) {
+    $query = "INSERT INTO trash(nome, tipo, quantidade) VALUES ('{$nome}','{$tipo}', {$quantidade})";
     return mysqli_query($connection, $query);
 }
 
