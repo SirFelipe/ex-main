@@ -1,48 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/css/uikit.min.css">
-    <script src="styles/js/uikit.min.js"></script>
-    <script src="styles/js/uikit-icons.min.js"></script>
-    <title>ex - Seu lixo no lugar</title>
+	<title>LOGIN BRABO</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="assets/css/login_estilo.css">
 </head>
-<body class="uk-container-expand">
-    <!-- Header -->
-    <div>
-        <div class="uk-card uk-card-primary uk-card-hover uk-card-body ">
-            <h3 class="uk-card-title">ex - onde deve estar o lixo!</h3>
-            <p>O lixo precisa de um fim, o ex é o fim para o seu lixo</p>
-        </div>
-        <nav class="uk-navbar-container" uk-navbar>
-            <div class="uk-navbar-left">
-                <ul class="uk-navbar-nav">
-                    <li><a href="./src/index.php">home</a></li>
-                    <li><a href="./src/login.php">login</a></li>
-                    <li><a href="./src/about.php">about</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <form action="login-granted.php" method="post">
-        <div class="uk-align-center">
-            <legend class="uk-legend uk-text-center">Usuário</legend>
-            <input type="text" name="user" id="user" placeholder="yuribreion" class="uk-input uk-form-width-medium uk-form-large uk-align-center">
-            <legend class="uk-legend uk-text-center">Chave</legend>
-            <input type="password" name="password" id="password" placeholder="segredo!" class="uk-input uk-form-width-medium uk-form-large uk-align-center">
-            <button type="submit" class="uk-button uk-button-primary uk-align-center">Vamos lá</button>
-        </div>
-    </form>
-    
-
-    <!-- Footer -->
-    <div>
-        <div class="uk-card uk-card-secondary uk-card-body">
-            <p>ex™ - Uma empresa cheia de ❤ por SP </p>
-        </div>
-    </div>
+<!-- LOGIN -->
+<body>
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="assets/img/logo_ex.jpg" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form>
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" name="" class="form-control input_user" value="" placeholder="username">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+						</div>
+						<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customControlInline">
+								<label class="custom-control-label" for="customControlInline">Me lembre</label>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="d-flex justify-content-center mt-3 login_container">
+					<button type="button" name="button" class="btn login_btn">Login</button>
+				</div>
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Não tem uma conta? <a href="#" class="ml-2">Cadastre-se</a>
+					</div>
+					<div class="d-flex justify-content-center links">
+						<a href="#">Esqueceu a senha?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
