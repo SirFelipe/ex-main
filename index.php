@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- HEAD -->
-  <?php include 'src/head.php'; ?>
+  <?php include 'src/index/head.php'; ?>
 
 <body>
 
@@ -9,23 +9,26 @@
   <?php include 'src/navigation.php'; ?>
 
   <!-- Cabeçario -->
-  <?php include 'src/header.php'; ?>
+  <?php include 'src/index/header.php'; ?>
 
   <!-- Icons Grid -->
-  <?php include 'src/section_icons.php'; ?>
+  <?php include 'src/index/section_icons.php'; ?>
 
   <!-- Image Showcases -->
-  <?php include 'src/section_img-showcase.php'; ?>
+  <?php include 'src/index/section_img-showcase.php'; ?>
 
   <!-- Time -->
-  <?php include 'src/section_team.php'; ?>
+  <?php include 'src/index/section_team.php'; ?>
 
   <!-- Call to Action -->
-  <?php include 'src/section_call-to-action.php'; ?>
+  <?php include 'src/index/section_call-to-action.php'; ?>
 
   <!-- Footer -->
-  <?php include 'src/footer.php'; ?>
+  <?php include 'src/index/footer.php'; ?>
 
+  <script type="text/javascript" src="assets/js/scrolling-nav.js">
+
+  </script>
 </body>
 
 </html>

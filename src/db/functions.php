@@ -1,3 +1,5 @@
+<?php include 'db.php'; ?>
+
 <?php
 
 function insereUsuario($connection, $user, $password) {
@@ -5,8 +7,8 @@ function insereUsuario($connection, $user, $password) {
     return mysqli_query($connection, $query);
 }
 
-function insereLixo($connection, $nome, $tipo, $quantidade) {
-    $query = "INSERT INTO trash(nome, tipo, quantidade) VALUES ('{$nome}','{$tipo}', {$quantidade})";
+function insereLixo($connection, $nome, $tipo, $quantidade, $user_email) {
+    $query = "INSERT INTO trash(nome, tipo, quantidade,user_email) VALUES ('{$nome}','{$tipo}', {$quantidade}, '{$user_email}')";
     return mysqli_query($connection, $query);
 }
 
@@ -35,3 +37,27 @@ function listarProdutosPorId($connection, $id) {
     $retorno = mysqli_query($connection, $query);
     return mysqli_fetch_assoc($retorno);
 }
+
+function mostrarDadosCesta(){
+  global $connection;
+
+  $user_email = $_SESSION['email'];
+  $query = "SELECT * FROM trash WHERE user_email = '$user_email'";
+  $select_trash = mysqli_query($connection,$query);
+
+  //TRAZENDO OS DADOS DA TABELA
+  while ($row = mysqli_fetch_assoc($select_trash)) {
+    $nome = $row['nome'];
+    $tipo = $row['tipo'];
+    $quantidade = $row['quantidade'];
+
+    echo '<tr>';
+    echo '<td>'. $nome .'</td>';
+    echo '<td>'. $tipo .'</td>';
+    echo '<td>'. $quantidade .'</td>';
+    echo '</tr>';
+  }
+
+}
+
+?>
