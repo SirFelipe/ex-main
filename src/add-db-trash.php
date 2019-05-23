@@ -15,18 +15,19 @@
             <p>lixo na cesta...</p>
         </div>
 
-        <?php 
+        <?php
 
-        include("./db/connection.php");
+        include("./db/db.php");
         include("./db/functions.php");
 
         $nome = $_POST['nome'];
         $tipo = $_POST['tipo'];
         $quantidade = $_POST['quantidade'];
+        $email = $_SESSION['email'];
 
-        if (insereLixo($connection, $nome, $tipo, $quantidade )) {
-                ?> 
-                
+        if (insereLixo($connection, $nome, $tipo, $quantidade, $email)) {
+                ?>
+
                 <div class="uk-container uk-margin-top">
                 <legend class="uk-legend">Sucesso!</legend>
                     <table class="uk-table uk-table-divider">
@@ -41,19 +42,19 @@
                         <tr>
                             <td><?= $nome ?></td>
                             <td><?= $tipo ?></td>
-                            <td><?= $quantidade ?></td>            
+                            <td><?= $quantidade ?></td>
                         </tr>
                     </tbody>
                     </table>
                     <div class="uk-align-center">
-                        <a href="add-trash.php"><button class="uk-button uk-button-secondary uk-align-center">Voltar</button></a>
+                        <a href="home-user.php"><button class="uk-button uk-button-secondary uk-align-center">Voltar</button></a>
                     </div>
                 </div>
 
                 <?php
             } else {
-                ?> 
-                
+                ?>
+
                 <script>
                     UIkit.notification({
                     message: 'Erro em lixo <?= $nome ?>',
