@@ -13,15 +13,15 @@
     global $connection;
 
     //DECLARAÇÃO DE VÁRIAVEIS
-    $email1    = $_POST['email'];
-    $password1 = $_POST['password'];
+    $email    = $_POST['email'];
+    $password = $_POST['password'];
 
     //TRATAMENTO SQL INJECTION
-    $email = mysqli_real_escape_string($connection, $email1);
-    $password = mysqli_real_escape_string($connection, $password1);
+    $email = mysqli_real_escape_string($connection, $email);
+    $password = mysqli_real_escape_string($connection, $password);
 		$password = md5($password);
     //VALIDAÇÃO
-    if (empty($username)) {array_push($errors, "Digite um email");}
+    if (empty($email)) {array_push($errors, "Digite um email");}
     if (empty($password)) {array_push($errors, "Digite uma senha");}
 
     $query = "SELECT * FROM users";

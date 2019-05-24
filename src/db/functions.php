@@ -7,6 +7,28 @@ function insereUsuario($connection, $user, $password) {
     return mysqli_query($connection, $query);
 }
 
+function mostrarDadosUsuario($email, $password){
+  global $connection;
+
+  $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+  $select = mysqli_query($connection, $query);
+  while ($row = mysqli_fetch_assoc($select)) {
+    $username = $row['username'];
+    $password = $row['password'];
+    $email = $row['email'];
+    $id = $row['id'];
+  }
+  //TRAZENDO OS DADOS DO USUÁRIs
+
+  echo '<tr>';
+  echo '<td>' . $id . '</td>';
+  echo '<td>' . $username . '</td>';
+  echo '<td>' . $email . '</td>';
+  echo '<td class="text-center"><a class="glyphicon glyphicon-trash" href="remover_perfil.php?delete=' . $id . '"></a></td>';
+  echo '<td class="text-center"><a class="glyphicon glyphicon-pencil" href="editar_perfil.php?edit=' .  $id . '"></a></td>';
+  echo '</tr>';
+}
+
 function insereLixo($connection, $nome, $tipo, $quantidade, $user_email) {
     $query = "INSERT INTO trash(nome, tipo, quantidade,user_email) VALUES ('{$nome}','{$tipo}', {$quantidade}, '{$user_email}')";
     return mysqli_query($connection, $query);

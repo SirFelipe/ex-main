@@ -14,14 +14,16 @@
   <!-- Icons Grid -->
   <?php include 'src/index/section_icons.php'; ?>
 
+  <!-- Call to Action -->
+  <?php include 'src/index/section_call-to-action.php'; ?>
+
   <!-- Image Showcases -->
   <?php include 'src/index/section_img-showcase.php'; ?>
 
   <!-- Time -->
   <?php include 'src/index/section_team.php'; ?>
 
-  <!-- Call to Action -->
-  <?php include 'src/index/section_call-to-action.php'; ?>
+  <?php include 'src/index/section_banner.php'; ?>
 
   <!-- Footer -->
   <?php include 'src/index/footer.php'; ?>

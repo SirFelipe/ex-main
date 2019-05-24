@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../assets/css/uikit.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
     <script src="../assets/js/uikit.min.js"></script>
     <title>User - ex</title>
 </head>
@@ -36,6 +37,10 @@
             <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
                 <a href="view-bucket.php"><h3 class="uk-card-title">Ver cesta</h3></a>
                 <p>Aqui você pode conferir o que já esta cadastrado</p>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                <a href="perfil.php"><h3 class="uk-card-title">Editar perfil</h3></a>
+                <p>Aqui você pode editar seu perfil</p>
             </div>
         </div>
     </main>
