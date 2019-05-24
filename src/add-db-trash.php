@@ -17,7 +17,6 @@
 
         <?php
 
-        include("./db/db.php");
         include("./db/functions.php");
 
         $nome = $_POST['nome'];

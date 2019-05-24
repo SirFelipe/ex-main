@@ -51,7 +51,7 @@ h6 {
 
 .cabecalho p{
 	font-size: 18px;
-  color: #2a2f4a;
+  color: #FFF;
 }
 
 .cabecalho h1{
@@ -59,8 +59,8 @@ h6 {
 	font-size:5.7em;
 	text-align: center;
   font-size:25px;
-  color: #000;
-  font-family: "lemon", sans-serif;
+  color: #262626;
+  font-family: sans-serif;
 }
 
 
@@ -110,13 +110,16 @@ h6 {
     padding: 0 0.125em 0 .375em;
 }
 
+#icons{
+  background-color: #262626 !important;
+  color: #fff;
+}
 
 #icons .funciona{
   text-align: center;
   line-height: 29px;
   font-size: 30px;
   font-weight: 600;
-  color: #000;
 }
 
 
@@ -162,6 +165,23 @@ h6 {
 
 .conteudo .design figure img{
   width: 100%;
+  border-radius: 50%;
+}
+
+.conteudoTexto{
+  text-align: center;
+}
+
+#vem_de_ex{
+  background-color: #FFF;
+}
+
+.ex{
+  color: #9bf1ff;
+}
+
+.ex-dark{
+  color: #2a2f4a;
 }
 
 header.masthead {
@@ -272,6 +292,16 @@ footer.footer {
   padding-bottom: 4rem;
 }
 
+footer.footer a{
+  color: #fff;
+}
+
+footer.footer a:hover{
+  color: #0056b3;
+  transition: all .3s ease-in-out;
+}
+
+
 .error {
 	width: 92%;
 	margin: 0px auto;
@@ -314,12 +344,14 @@ body {background: #EAEAEA;}
 .user-body .tab-content h4 {width: 100%; margin: 10px 0; color: #333;}
 
 @media screen and (min-width: 550px){
-  /*#cabecalho{
-    background-image:linear-gradient(rgba(61, 61, 89, 0.7), rgba(0, 0, 0, 0.5)), url(../img/banner.jpg);
+  #cabecalho{
+    background: url("../img/bg-masthead.jpg") no-repeat center center;
     background-size:cover;
     background-attachment: fixed;
     min-width:550px;
-  }*/
+  }
+
+
 
   #banner{
     background-image:linear-gradient(rgba(61, 61, 89, 0.7), rgba(0, 0, 0, 0.5)), url(../img/banner.png);

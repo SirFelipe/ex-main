@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24-Maio-2019 às 15:11
+-- Generation Time: 24-Maio-2019 às 22:21
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.1
 
@@ -67,7 +67,9 @@ CREATE TABLE `trash` (
 INSERT INTO `trash` (`id`, `nome`, `tipo`, `quantidade`, `user_email`) VALUES
 (1, 'garrafa pet', 'plastico', 2, 'abacate@ex.com'),
 (2, 'garrafa pet', 'plastico', 2, 'abacate@ex.com'),
-(3, 'canudinho', 'plastico', 5, 'abacate@ex.com');
+(3, 'canudinho', 'plastico', 5, 'abacate@ex.com'),
+(4, 'garrafa pet', 'plastico', 2, 'teste@teste.com'),
+(5, 'garrafa pet', 'plastico', 2, 'teste@teste.com');
 
 -- --------------------------------------------------------
 
@@ -87,12 +89,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(37, 'gabriel', 'gabriel.kaminaga@hotmail.com', '202cb962ac59075b964b07152d234b70'),
-(38, 'felipe', 'ex_lixo@ex.com', '202cb962ac59075b964b07152d234b70'),
-(39, 'jean', 'gean@exlixo.com', '81dc9bdb52d04dc20036dbd8313ed055'),
-(41, 'abacate', 'abacate@ex.com', '827ccb0eea8a706c4c34a16891f84e7b'),
-(42, 'ex', 'ex@ex.com', '202cb962ac59075b964b07152d234b70'),
-(43, 'teste', 'teste@teste.com', '827ccb0eea8a706c4c34a16891f84e7b');
+(46, 'ex-teste', 'ex-teste@ex.com', '12345'),
+(48, 'laranja', 'laranja@ex.com', '123');
 
 --
 -- Indexes for dumped tables
@@ -130,13 +128,13 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT for table `trash`
 --
 ALTER TABLE `trash`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

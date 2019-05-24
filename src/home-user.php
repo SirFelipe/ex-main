@@ -42,6 +42,10 @@
                 <a href="perfil.php"><h3 class="uk-card-title">Editar perfil</h3></a>
                 <p>Aqui você pode editar seu perfil</p>
             </div>
+            <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                <a href="logout.php"><h3 class="uk-card-title">Sair</h3></a>
+                <p>Deixe a sessão</p>
+            </div>
         </div>
     </main>
 </body>
