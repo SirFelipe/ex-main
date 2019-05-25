@@ -17,7 +17,7 @@
             <div class="col-md-6">
               <div class="conteudoTexto">
                 <h3>Estação Vila Mariana</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Estamos localizados na região Sul da cidade, proxima a grandes pontos de concentração de pessoas para ajudar você a ter a melhor experiencia de destarte correto de resíduos.</p>
               </div>
             </div>
           </div>
