@@ -50,6 +50,8 @@
 					$_SESSION['password'] = $db_pw;
 					$_SESSION['username'] = $db_user;
 					header('location: src/home-user.php');
+				}else{
+					array_push($errors, "Erro desconhecido, por favor insira os dados corretamente");
 				}
 				//$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 				//$results = mysqli_query($connection,$query);

@@ -24,7 +24,14 @@
           </div>
         </div>
 				<div class="d-flex justify-content-center form_container">
-					<?php if (isset($_POST['update_user'])){ atualizaUsuario(); } ?>
+					<?php
+						if(isset($_POST['update_user'])){
+							atualizaUsuario();
+						}
+						if(isset($_POST['remove_user'])){
+							removeUsuario();
+						}
+					?>
 					<form id="atualizar_form" action="" method="post">
 						<?php include 'errors.php'; ?>
             <!-- nm_USUARIO -->
@@ -55,6 +62,24 @@
 						<div class="d-flex justify-content-center mt-3 login_container">
 							<button id="update_btn" type="submit" name="update_user" class="btn login_btn">Atualizar</button>
 						</div>
+            <div class="d-flex justify-content-center mt-3 login_container">
+							<button type="submit" class="btn btn-danger btn-block" name="remove_user">Remover</button>
+              <!-- <button id="remove_btn" type="submit" data-toggle="modal" data-target=".bs-example-modal-sm" class="btn btn-danger">Remover</button> -->
+							<!-- MODAL DE CONFIRMACAO
+							<div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+								<div class="modal-dialog modal-sm">
+									<div class="modal-content">
+										<div class="modal-header"><h4>Confirmação<i class="fa fa-lock"></i></h4></div>
+										<div class="modal-body"><i class="fa fa-question-circle"></i> Você tem certeza que quer remover a conta?</div>
+										<div class="modal-footer">
+											<button type="submit" class="btn btn-danger btn-block" name="remove_user">Remover</button>
+											<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							 -->
+            </div>
 					</form>
 				</div>
 			</div>
