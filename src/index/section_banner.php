@@ -1,5 +1,5 @@
-<!-- Call to Action -->
-<section id="callToAction" class="call-to-action text-white text-center">
+<!-- Banner -->
+<section id="banner" class="call-to-action text-white text-center">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -9,7 +9,7 @@
       <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
         <form>
           <div class="form-row">
-            
+
           </div>
         </form>
       </div>

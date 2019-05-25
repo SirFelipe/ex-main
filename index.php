@@ -11,23 +11,37 @@
   <!-- Cabeçario -->
   <?php include 'src/index/header.php'; ?>
 
-  <!-- Icons Grid -->
+  <?php include 'src/index/section_vem-de-ex.php'; ?>
+
+  <!--  Icons Grid -->
   <?php include 'src/index/section_icons.php'; ?>
 
-  <!-- Image Showcases -->
-  <?php include 'src/index/section_img-showcase.php'; ?>
+  <!--  Call to Action -->
+  <?php include 'src/index/section_call-to-action.php'; ?>
+
+  <!-- Encontrar -->
+  <?php include 'src/index/section_encontrar.php'; ?>
+
+  <!-- Banner -->
+  <?php include 'src/index/section_banner.php'; ?>
 
   <!-- Time -->
   <?php include 'src/index/section_team.php'; ?>
 
-  <!-- Call to Action -->
-  <?php include 'src/index/section_call-to-action.php'; ?>
-
   <!-- Footer -->
   <?php include 'src/index/footer.php'; ?>
 
-  <script type="text/javascript" src="assets/js/scrolling-nav.js">
+  <script type="text/javascript" src="assets/vendor/jquery/jquery.min.js"></script>
+  <script>
+    $("a[href^='#']").click(function(e) {
+      e.preventDefault();
 
+      var position = $($(this).attr("href")).offset().top;
+
+      $("body, html").animate({
+        scrollTop: position
+      } /* speed */ );
+    });
   </script>
 </body>
 

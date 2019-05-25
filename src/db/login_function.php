@@ -13,36 +13,48 @@
     global $connection;
 
     //DECLARAÇÃO DE VÁRIAVEIS
-    $email1    = $_POST['email'];
-    $password1 = $_POST['password'];
+    $email    = $_POST['email'];
+    $password = $_POST['password'];
 
     //TRATAMENTO SQL INJECTION
-    $email = mysqli_real_escape_string($connection, $email1);
-    $password = mysqli_real_escape_string($connection, $password1);
-		$password = md5($password);
+    $email = mysqli_real_escape_string($connection, $email);
+		$password = mysqli_real_escape_string($connection, $password);
+
+
     //VALIDAÇÃO
-    if (empty($username)) {array_push($errors, "Digite um email");}
+		if (empty($email)) { array_push($errors, "Digite um email "); }
     if (empty($password)) {array_push($errors, "Digite uma senha");}
+		if(!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^",$email)){
+			array_push($errors, "Digite um email valido.");
+		}
 
-    $query = "SELECT * FROM users";
-    $select_user = mysqli_query($connection, $query);
+    $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+    $select_usuario = mysqli_query($connection, $query);
 
-    while($row = mysqli_fetch_assoc($select_user)){
+    while($row = mysqli_fetch_assoc($select_usuario)){
+			$db_id = $row['id'];
       $db_user = $row['username'];
       $db_email = $row['email'];
       $db_pw = $row['password'];
-    }
 
-    if($email !== $db_email && $password !== $db_pw){
-      array_push($errors, "Email ou senha inválidos");
-    }elseif(count($errors) == 0){
-			//$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-			//$results = mysqli_query($connection,$query);
-			$_SESSION['email'] = $db_email;
-			$_SESSION['password'] = $db_pw;
-			$_SESSION['username'] = $db_user;
-			header('location: src/home-user.php');
-		}
-	}
+			if(count($errors) == 0){
+				if($email !== $db_email && $password !== $db_pw){
+					array_push($errors, "Email ou senha inválidos");
+				}elseif($email == $db_email && $password !== $db_pw){
+					array_push($errors, "Senha incorreta");
+				}elseif($email !== $db_email && $password == $db_pw){
+					array_push($errors, "Email incorreto");
+				}elseif($email == $db_email && $password == $db_pw){
+					$_SESSION['id'] = $db_id;
+					$_SESSION['email'] = $db_email;
+					$_SESSION['password'] = $db_pw;
+					$_SESSION['username'] = $db_user;
+					header('location: src/home-user.php');
+				}
+				//$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+				//$results = mysqli_query($connection,$query);
+			}
+    }
+}
 
 ?>

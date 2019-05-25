@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="footer bg-light">
+<footer class="footer bg-dark">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
@@ -25,18 +25,23 @@
       <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
         <ul class="list-inline mb-0">
           <li class="list-inline-item mr-3">
-            <a href="#">
+            <a href="https://www.facebook.com/ExLixeiShow">
               <i class="fab fa-facebook fa-2x fa-fw"></i>
             </a>
           </li>
           <li class="list-inline-item mr-3">
-            <a href="#">
-              <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+            <a href="https://www.youtube.com/channel/UC92rj83TIZkfdCeJeObyMeQ/videos">
+              <i class="fab fa-youtube fa-2x fa-fw"></i>
             </a>
           </li>
           <li class="list-inline-item">
             <a href="https://www.instagram.com/ex_lixo/">
               <i class="fab fa-instagram fa-2x fa-fw"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/ex-lixo/ex-blog">
+              <i class="fab fa-github fa-2x fa-fw"></i>
             </a>
           </li>
         </ul>

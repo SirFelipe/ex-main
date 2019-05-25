@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" href="assets/css/login_estilo.css">
+	<link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 <!-- LOGIN -->
 <body>
@@ -19,6 +20,7 @@
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form action="" method="post">
+						<?php include 'src/errors.php'; ?>
 						<!-- nm_usuario -->
 						<div class="input-group mb-3">
 							<div class="input-group-append">
