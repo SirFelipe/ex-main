@@ -7,9 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../assets/css/uikit.min.css">
     <script src="../assets/js/uikit.min.js"></script>
+    <script src="../assets/js/uikit-icons.min.js"></script>
     <title>ex - cadastro</title>
 </head>
 <body>
+<?php
+    if (array_key_exists("removido", $_GET) && $_GET['removido'] == "true") {
+        ?>
+        <script>
+            UIkit.notification({
+            message: 'Lixo removido com sucesso',
+            status: 'success',
+            pos: 'top-center',
+            timeout: 5000
+        });
+        </script>
+        <?php
+    }
+?>
     <main>
         <div class="uk-card uk-card-primary uk-card-body">
             <h3 class="uk-card-title">ex - Cesta de lixo</h3>
@@ -21,9 +36,12 @@
           <table class="uk-table uk-table-divider">
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Nome</th>
                 <th>Tipo</th>
                 <th>Quantidade</th>
+                <th>Remover</th>
+                <th>Editar</th>
               </tr>
             </thead>
             <tbody>

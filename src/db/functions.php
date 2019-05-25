@@ -128,13 +128,13 @@ function removerLixo($connection, $id) {
     return mysqli_query($connection, $query);
 }
 
-function atualizarProduto($connection, $id, $nome, $preco) {
-    $query = "UPDATE produtos SET nome = '{$nome}' ,preco = {$preco} WHERE id = {$id}";
+function atualizarLixo($connection, $id, $nome, $tipo, $quantidade) {
+    $query = "UPDATE trash SET nome = '{$nome}' , tipo = '{$tipo}', quantidade = '{$quantidade}' WHERE id = {$id}";
     return mysqli_query($connection, $query);
 }
 
-function listarProdutosPorId($connection, $id) {
-    $query = "SELECT nome, preco FROM produtos WHERE ID = {$id}";
+function listarLixosPorId($connection, $id) {
+    $query = "SELECT id, nome, tipo, quantidade FROM trash WHERE id = {$id}";
     $retorno = mysqli_query($connection, $query);
     return mysqli_fetch_assoc($retorno);
 }
@@ -152,11 +152,28 @@ function mostrarDadosCesta(){
     $tipo = $row['tipo'];
     $quantidade = $row['quantidade'];
 
-    echo '<tr>';
-    echo '<td>'. $nome .'</td>';
-    echo '<td>'. $tipo .'</td>';
-    echo '<td>'. $quantidade .'</td>';
-    echo '</tr>';
+    ?>
+      <tr>
+          <td>
+              <?= $row['id'] ?>
+          </td>
+          <td>
+              <?= $row['nome'] ?>
+          </td>
+          <td>
+              <?= $row['tipo'] ?>
+          </td>
+          <td>
+              <?= $row['quantidade'] ?>
+          </td>
+          <td>
+              <a href="remove-trash.php?id=<?= $row['id'] ?>" class="uk-icon-link" uk-icon="trash"></a>
+          </td>
+          <td>
+              <a href="edit-trash.php?id=<?= $row['id'] ?>" class="uk-icon-link" uk-icon="file-edit"></a>
+          </td>
+      </tr>
+<?php
   }
 
 }
