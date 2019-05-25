@@ -48,10 +48,10 @@
 				</div>
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Não tem uma conta? <a href="cadastro.php" class="ml-2">Cadastre-se</a>
+						Não tem uma conta? <a href="cadastro.php" class="ml-2 url">Cadastre-se</a>
 					</div>
 					<div class="d-flex justify-content-center links">
-						<a href="#">Esqueceu a senha?</a>
+						<a href="#" class="url">Esqueceu a senha?</a>
 					</div>
 				</div>
 			</div>
