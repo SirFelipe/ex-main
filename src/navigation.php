@@ -17,6 +17,9 @@
             <a class="nav-link js-scroll-trigger" href="#encontrar">Onde encontrar</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="https://ex-lixo.github.io/ex/">Blog</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="login.php">Login</a>
           </li>
         </ul>

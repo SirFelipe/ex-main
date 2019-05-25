@@ -165,7 +165,7 @@ h6 {
 
 .conteudo .design figure img{
   width: 100%;
-  border-radius: 50%;
+  border-radius: 30%;
 }
 
 .conteudoTexto{
@@ -187,7 +187,7 @@ h6 {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  background: url("../img/wallpaper_recicle.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -345,7 +345,7 @@ body {background: #EAEAEA;}
 
 @media screen and (min-width: 550px){
   #cabecalho{
-    background: url("../img/bg-masthead.jpg") no-repeat center center;
+    background-image: linear-gradient(rgba(89, 89, 89, 0.7), rgba(0, 0, 0, 0.5)), url("../img/wallpaper_recicle.jpg");
     background-size:cover;
     background-attachment: fixed;
     min-width:550px;
