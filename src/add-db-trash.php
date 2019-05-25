@@ -28,7 +28,7 @@
                 ?>
 
                 <div class="uk-container uk-margin-top">
-                <legend class="uk-legend">Sucesso!</legend>
+                <legend class="uk-legend">Sucesso ao inserir!</legend>
                     <table class="uk-table uk-table-divider">
                     <thead>
                         <tr>

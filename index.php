@@ -2,7 +2,6 @@
 <html lang="en">
   <!-- HEAD -->
   <?php include 'src/index/head.php'; ?>
-
 <body>
 
   <!-- Navigation -->

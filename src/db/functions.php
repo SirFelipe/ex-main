@@ -7,6 +7,20 @@
       return mysqli_query($connection, $query);
   }
 
+
+  function removeUsuario(){
+    global $connection;
+
+    //ARRAY PARA errors
+    $errors = array();
+    $id = $_SESSION['id'];
+
+    $query = "DELETE FROM users WHERE id = $id";
+    $result = mysqli_query($connection, $query);
+
+    header('location: logout.php');
+  }
+
 function atualizaUsuario(){
     global $connection;
 
@@ -17,28 +31,36 @@ function atualizaUsuario(){
     $id = $_SESSION['id'];
     $username_novo = $_POST['username'];
     $email_novo = $_POST['email'];
+    $email_antigo = $_SESSION['email'];
     $old_password = $_POST['password'];
     $new_password = $_POST['new-pw'];
 
     //TRATAMENTO SQL INJECTION
     $password_old = mysqli_real_escape_string($connection, $old_password);
     $password_new = mysqli_real_escape_string($connection, $new_password);
+    $email_novo = mysqli_real_escape_string($connection, $email_novo);
 
     //VALIDAÇÃO SE O EMAIL JÁ EXISTE
-    $query = "SELECT * FROM users";
+    $query = "SELECT * FROM users WHERE email = '$email_novo'";
     $results = mysqli_query($connection, $query);
-    if (mysqli_num_rows($results) > 0) {
-      array_push($errors, "Email já existente");
-      exit();
-    }else{
-      while($row = mysqli_fetch_assoc($results)){
-        $db_id = $row['id'];
-        $db_user = $row['username'];
-        $db_email = $row['email'];
-        $db_pw = $row['password'];
-      }
+
+    while($row = mysqli_fetch_assoc($results)){
+          $db_id = $row['id'];
+          $db_user = $row['username'];
+          $db_email = $row['email'];
+          $db_pw = $row['password'];
     }
+
+
     //VALIDAÇÕES
+    /*$queryEmail = "SELECT email FROM users";
+    $resultado = mysqli_query($connection, $query);
+    while($row = mysqli_fetch_assoc($resultado)){
+      if ($email_antigo){
+        array_push($errors, "Email já existente");
+      }
+    }*/
+
     if (empty($username_novo)) { array_push($errors, "Digite um nome de usuário "); }
     if (empty($email_novo)) { array_push($errors, "Digite um email"); }
     if (empty($password_old)) { array_push($errors, "Digite uma senha"); }
@@ -47,17 +69,20 @@ function atualizaUsuario(){
     }
 
     if(count($errors) == 0){
-      $update = "UPDATE users SET (username = '$username_novo',
+      $update = "UPDATE users SET username = '$username_novo',
                 email = '$email_novo',
-                password = '$password_new')
+                password = '$password_new'
                 WHERE id = $id";
 
-      $resultado = mysqli_query($connection, $update);
+                $resultado = mysqli_query($connection, $update);
 
       $_SESSION['username'] = $username_novo;
       $_SESSION['email'] = $email_novo;
       $_SESSION['password'] = $password_new;
       header('location: home-user.php');
+    }else{
+      echo "Erro desconhecido, por favor tente novamente.";
+      exit();
     }
 }
 
