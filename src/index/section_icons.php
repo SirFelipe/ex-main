@@ -28,7 +28,7 @@
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
-                <i class="icon-check m-auto text-primary"></i>
+                <i class="icon-wallet m-auto text-primary"></i>
               </div>
               <h3>Receba Créditos</h3>
               <p class="lead mb-0">Consulte seus créditos a qualquer momento!</p>
@@ -37,7 +37,7 @@
           <div class="col-lg-12">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
-                <i class="icon-basket m-auto text-primary"></i>
+                <i class="icon-basket-loaded m-auto text-primary"></i>
               </div>
               <h3>Utilize seus créditos</h3>
               <p class="lead mb-0">Consulte os estabelecimentos parceiros para utilizar seus créditos!</p>

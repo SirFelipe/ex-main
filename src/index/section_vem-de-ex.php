@@ -16,11 +16,11 @@
             </div>
             <div class="col-md-6">
               <div class="conteudoTexto">
-                <h3>O <span class="ex-dark">EX</span> chegou para facilitar a forma como você recicla.</h3>
+                <h3>O <span class="ex-alternativa">EX</span> chegou para facilitar a forma como você recicla.</h3>
                 <p>
                   Somos uma plataforma de reciclagem de lixo que espalha lixeiras com estação fixa.
                   <br>
-                  Em outras palavras, você encontra uma <span class="ex-dark">EX</span>, destrava, deposita a quantidade de lixo que precisar e depois resgata o lixo depositado em créditos, para que todos possam curtir uma cidade mais limpa também.
+                  Em outras palavras, você encontra uma <span class="ex-alternativa">EX</span>, destrava, deposita a quantidade de lixo que precisar e depois resgata o lixo depositado em créditos, para que todos possam curtir uma cidade mais limpa também.
                 </p>
                 <strong>
                   <br>
@@ -30,7 +30,7 @@
                   <br>
                   Para uma cidade mais limpa...
                 </strong>
-                <h5><br>#VemDeEx</h5>
+                <h5><br><span class="ex-alternativa">#VemDeEx</span></h5>
               </div>
             </div>
           </div>

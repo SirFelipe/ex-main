@@ -50,7 +50,7 @@ h6 {
 }
 
 .cabecalho p{
-	font-size: 18px;
+	font-size: 23px;
   color: #FFF;
 }
 
@@ -59,7 +59,7 @@ h6 {
 	font-size:5.7em;
 	text-align: center;
   font-size:25px;
-  color: #262626;
+  color: #FFF;
   font-family: sans-serif;
 }
 
@@ -73,11 +73,12 @@ h6 {
 }
 
 #cabecalho .flecha a{
-  color: #2a2f4a !important;
+  color: #9bf1ff !important;
+  font-size: 1.5em;
 }
 
 #cabecalho .flecha a:hover{
-  color: #FFF !important;
+  color: #2a2f4a !important;
 }
 
 #cabecalho header div form {
@@ -161,6 +162,19 @@ h6 {
   position: relative;
 }
 
+.ex-alternativa{
+  color: #2466b0;
+}
+
+.ex{
+  color: #9bf1ff;
+}
+
+.ex-dark{
+  color: #2a2f4a;
+}
+
+
 .conteudo .design figure{
   max-width: 600px;
   margin: 0 auto;
@@ -176,17 +190,14 @@ h6 {
   text-align: center;
 }
 
+#encontrar div article h3{
+  padding-top: 10%;
+}
+
 #vem_de_ex{
   background-color: #FFF;
 }
 
-.ex{
-  color: #9bf1ff;
-}
-
-.ex-dark{
-  color: #2a2f4a;
-}
 
 header.masthead {
   position: relative;
@@ -349,7 +360,7 @@ body {background: #EAEAEA;}
 
 @media screen and (min-width: 550px){
   #cabecalho{
-    background-image: linear-gradient(rgba(89, 89, 89, 0.7), rgba(0, 0, 0, 0.5)), url("../img/wallpaper_recicle.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/wallpaper_recicle.jpg");
     background-size:cover;
     background-attachment: fixed;
     min-width:550px;
@@ -382,7 +393,7 @@ body {background: #EAEAEA;}
 
 @media screen and (min-width: 750px){
   #cabecalho h1{
-    font-size: 3.4em;
+    font-size: 4.4em;
   }
 
   .conteudo article header h1{
