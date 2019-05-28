@@ -29,6 +29,7 @@ h6 {
 	background-repeat: no-repeat;
 	background-position: center center;
 	color: #fff;
+  text-shadow: 0 1px 4px rgba(42, 47, 74,0.1);
 }
 
 #cabecalho header{
