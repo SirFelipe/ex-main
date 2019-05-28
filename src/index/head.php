@@ -5,8 +5,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>ex - Seu lixo no lugar</title>
+  <title>EX - Seu lixo no lugar</title>
 
+  <!-- ICON -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo_ex.jpg" />
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
   <!-- FONT AWESOME CDN -->
